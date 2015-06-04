@@ -24,7 +24,9 @@ export default class SafeAnchor extends React.Component {
       <a role={this.props.href ? undefined : 'button'}
         {...this.props}
         onClick={createChainedFunction(this.handleClick, this.props.onClick)}
-        href={this.props.href || ''}/>
+        href={this.props.href || ''}>
+        {this.props.children}
+      </a>
     );
   }
 }
